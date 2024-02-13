@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=" This Is Description For Project 9" />
+    <title>Project 9</title>
+    <!--Bootstrap File-->
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+    <!--Main Css File-->
+    <link rel="stylesheet" href="./styles/main.css" />
+    <!--Icons Library-->
+    <link rel="stylesheet" href="./styles/all.min.css" />
+  </head>
+
+  <body>
+    <div class="homepage p-4">
+      <div class="head d-flex justify-content-between">
+        <button
+          class="back icon d-flex justify-content-center align-items-center"
+        >
+          <i class="fa-solid fa-left-long"></i>
+        </button>
+        <button
+          class="settings icon d-flex justify-content-center align-items-center"
+        >
+          <i class="fa-solid fa-gear"></i>
+        </button>
+      </div>
+      <div
+        class="w-100 position-fixed top-50 start-50 translate-middle card-wrapper"
+      >
+        <div class="container h-100 card-container rounded-4">
+          <div
+            class="card w-100 h-100 p-md-5 p-4 d-flex justify-content-center align-items-center position-relative"
+          >
+            <div class="m-0 title d-flex flex-column">
+              <p class="first-word word d-inline-block m-0" data-text="match">
+                match
+              </p>
+              <p
+                class="second-word word m-0"
+                data-text="There are a lot of emergency team. Whose are these?"
+              >
+                there are a lot of emergency team. Whose are these?
+              </p>
+            </div>
+          </div>
+          <button
+            class="play p-3 rounded-pill d-flex justify-content-center align-items-center position-absolute"
+          >
+            <i class="fa-solid fa-play"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="game w-100 d-flex flex-column position-fixed top-50 start-50 translate-middle"
+    >
+      <div class="head">
+        <div class="head-icons p-4 d-flex justify-content-between">
+          <div class="left d-flex flex-column gap-3">
+            <div class="top d-flex gap-5">
+              <button
+                class="back icon d-flex justify-content-center align-items-center"
+              >
+                <i class="fa-solid fa-left-long"></i>
+              </button>
+              <div class="scoreWrapper col-lg-2 col-md-3 col-6 p-0 my-2">
+                <img src="./media/images/score.svg" class="scoreIcon" />
+                <span class="score"></span>
+              </div>
+            </div>
+            <button
+              class="pause icon d-flex justify-content-center align-items-center"
+            >
+              <i class="fa-solid fa-pause"></i>
+            </button>
+          </div>
+          <div class="right d-flex gap-3">
+            <button
+              class="volume icon d-flex justify-content-center align-items-center"
+            >
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+            <button
+              class="music icon d-flex justify-content-center align-items-center"
+            >
+              <i class="fa-solid fa-music"></i>
+            </button>
+            <button
+              class="settings icon d-flex justify-content-center align-items-center"
+            >
+              <i class="fa-solid fa-gear"></i>
+            </button>
+          </div>
+        </div>
+        <div class="head-text p-2">
+          <div class="container">
+            <div
+              class="title d-flex flex-row justify-content-center align-items-center gap-2"
+            >
+              <div class="title-icon h-100">
+                <img
+                  src="./media/images/pencil_icon.svg"
+                  class="w-100 h-100"
+                  alt="pencil_icon"
+                />
+              </div>
+              <h1 id="text" class="m-0">
+                match the professional emergency team to their vehicles
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="body py-4 d-flex justify-content-center">
+        <div class="container">
+          <div
+            class="items row w-100 h-100 d-flex justify-content-between align-items-center"
+          >
+            <div class="cards row col-5 d-flex justify-content-between">
+              <div class="card col-5 border-0">
+                <div class="img-container w-100 h-100">
+                  <img
+                    src="./media/images/firefighter.svg"
+                    class="w-100 h-100 object-fit-cover card-img"
+                    alt="img-1"
+                    data-index="1"
+                    draggable="true"
+                  />
+                </div>
+              </div>
+              <div class="card col-3 border-0">
+                <div class="img-container w-100 h-100">
+                  <img
+                    src="./media/images/doctor.svg"
+                    class="w-100 h-100 object-fit-cover card-img"
+                    alt="img-2"
+                    data-index="2"
+                    draggable="true"
+                  />
+                </div>
+              </div>
+              <div class="card col-4 border-0">
+                <div class="img-container w-100 h-100">
+                  <img
+                    src="./media/images/policeman.svg"
+                    class="w-100 h-100 object-fit-cover card-img"
+                    alt="img-3"
+                    data-index="3"
+                    draggable="true"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="match-cards row col-7 d-flex justify-content-between row-gap-2"
+            >
+              <div
+                class="match-card col-5 d-flex flex-column align-items-center"
+              >
+                <div class="img-container w-100 h-100">
+                  <img
+                    src="./media/images/fireEngine.svg"
+                    class="w-100 h-100 object-fit-cover match-img"
+                    alt="img-1"
+                    data-index="1"
+                    droppable="true"
+                    draggable="false"
+                  />
+                  <img
+                    src=""
+                    class="matched-img object-fit-contain"
+                    data-index="1"
+                  />
+                </div>
+              </div>
+              <div
+                class="match-card col-5 d-flex flex-column align-items-center"
+              >
+                <div class="img-container w-100 h-100">
+                  <img
+                    src="./media/images/ambulance.svg"
+                    class="w-100 h-100 object-fit-cover match-img"
+                    alt="img-2"
+                    data-index="2"
+                    droppable="true"
+                    draggable="false"
+                  />
+                  <img
+                    src=""
+                    class="matched-img object-fit-contain"
+                    data-index="2"
+                  />
+                </div>
+              </div>
+              <div
+                class="match-card col-6 d-flex flex-column align-items-center"
+              >
+                <div class="img-container w-100 h-100">
+                  <img
+                    src="./media/images/policeCar.svg"
+                    class="w-100 h-100 object-fit-cover match-img"
+                    alt="img-3"
+                    data-index="3"
+                    droppable="true"
+                    draggable="false"
+                  />
+                  <img
+                    src=""
+                    class="matched-img object-fit-contain"
+                    data-index="3"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="success-card rounded-5 p-3">
+      <button class="closeModal rounded-circle">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="card-wrapper h-100 rounded-5">
+        <div
+          class="img-wrapper d-flex justify-content-center align-items-center"
+        >
+          <img
+            src="./media/images/bunny.svg"
+            alt="bunny image"
+            class="w-100 object-fit-contain"
+          />
+        </div>
+        <div class="outer-card py-3 rounded-1">
+          <div
+            class="text-card d-flex gap-3 justify-content-center align-items-center"
+          >
+            <div class="content d-flex flex-column align-items-center">
+              <span class="message-text">correct answer</span>
+              <span
+                class="score-text d-flex justify-content-center gap-2 flex-wrap"
+              ></span>
+            </div>
+            <div class="score-icon-wrapper">
+              <img
+                src="./media/images/object.svg"
+                alt="score image"
+                class="w-100 object-fit-contain"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="arrows py-4 d-flex justify-content-center gap-5">
+          <button
+            class="left-arrow arrow d-flex justify-content-center align-items-center"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button
+            class="left-right arrow d-flex justify-content-center align-items-center"
+          >
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <audio id="start-audio" src="./media/audios/audio.mp3"></audio>
+    <audio id="correct-audio" src="./media/audios/audio.mp3"></audio>
+    <audio id="wrong-audio" src="./media/audios/audio.mp3"></audio>
+    <audio id="1" src="./media/audios/audio.mp3"></audio>
+    <audio id="2" src="./media/audios/audio.mp3"></audio>
+    <audio id="3" src="./media/audios/audio.mp3"></audio>
+    <script
+      id="DragDropTouch"
+      src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"
+    ></script>
+    <script src="./JS/script.js" async></script>
+  </body>
+</html>
